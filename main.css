@@ -1,0 +1,89 @@
+:root {
+	--prm-Lcyan: hsl(193, 38%, 86%);
+	--prm-Ngreen: hsl(150, 100%, 66%);
+	--n-Gblue: hsl(217, 19%, 38%);
+	--n-DGblue: hsl(217, 19%, 24%);
+	--n-Dblue: hsl(218, 23%, 16%);
+
+	--ff-main: 'Manrope', sans-serif;
+	--fw-800: 800;
+}
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+img {
+	display: block;
+	max-width: 100%;
+	transition: 0.3s;
+}
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--n-Dblue);
+	font-family: var(--ff-main);
+	font-weight: var(--fw-800);
+}
+.card {
+	width: 90%;
+	max-width: 535px;
+	background-color: var(--n-DGblue);
+	border-radius: 10px;
+	text-align: center;
+	padding: 2.5rem 1.2rem 4rem 1.2rem;
+	display: grid;
+	place-items: center;
+	gap: 1rem;
+	position: relative;
+	margin-bottom: 5rem;
+	transition: 0.3s;
+}
+.title {
+	text-transform: uppercase;
+	color: var(--prm-Ngreen);
+	font-size: 0.775rem;
+	letter-spacing: 3px;
+	transition: 0.3s;
+}
+#advice-text {
+	color: var(--prm-Lcyan);
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+	transition: 0.3s;
+}
+#btn-random {
+	position: absolute;
+	border: none;
+	outline: none;
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+	bottom: -30px;
+	margin-inline: auto;
+	background-color: var(--prm-Ngreen);
+	cursor: pointer;
+}
+#btn-random:hover {
+	box-shadow: 0 0 30px 3px hsla(150, 100%, 66%, 0.795);
+}
+@media (min-width: 426px) {
+	.card {
+		padding: 3rem 2.5rem 4.3rem 2.5rem;
+		gap: 1.3rem;
+	}
+	.title {
+		font-size: 0.9rem;
+	}
+	#advice-text {
+		font-size: 1.725rem;
+		margin-bottom: 1rem;
+	}
+}
