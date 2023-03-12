@@ -7,15 +7,10 @@ const renderAPI = () => {
 	fetch(url)
 		.then((response) => response.json())
 		.then((json) => {
-			let adviceText = '',
-				adviceId = 0
-			adviceText = json.slip.advice
-			adviceId = json.slip.id
-			advice.innerText = `"${adviceText}"`
-			advice_id.innerText = `${adviceId}`
-		})
-		.catch(function (error) {
-			console.log(error)
+		let adviceText = json.slip.advice,
+		    adviceId = json.slip.id
+		    advice.innerText = `"${adviceText}"`
+		    advice_id.innerText = `${adviceId}`
 		})
 }
 renderAPI()
